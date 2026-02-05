@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+@font-face {
+  font-family: 'Gameria';
+  src: url('../fonts/gameria/GAMERIA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 * {
     padding: 0;
     margin: 0;
@@ -7,11 +16,20 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+:root {
+    --primary-color: #FF6200;
+    --secondary-color: #000000;
+    --text-color: #222222;
+    --darker-color: #9c0000;
+    --white-color: #fff;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: var(--text-color);
 }
 
 a {
@@ -19,6 +37,30 @@ a {
     color: inherit;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Gameria', sans-serif;
+    letter-spacing: 3px;
+    line-height: 0.8;
+    /* color: var(--primary-color); */
+    color: transparent;
+    -webkit-text-stroke: 2px var(--secondary-color);
+    background: linear-gradient(0deg, var(--primary-color) 50%, var(--white-color) 100%);
+    background-clip: text;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.cta {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px 30px;
+    border-radius: 50px;
+}
 
 /* header */
 header {
@@ -26,8 +68,12 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(61, 0, 139);
-    padding: 10px;
+    /* background: var(--secondary-color); */
+    padding: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
 }
 
 header .container {
@@ -37,13 +83,73 @@ header .container {
     align-items: center;
 }
 
+header .site-logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 header .site-logo img {
-    width: 150px;
+    width: 120px;
 }
 
 header .navbar ul {
     list-style: none;
     display: flex;
     gap: 30px;
-    color: #FFF;
+    color: var(--white-color);
 }
+
+header .navbar ul li a {
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+/* End header */
+
+/* Hero */
+.hero {
+    width: 100%;
+    padding: 120px 0 60px;
+    height: 75vh;
+    background: #f5f5f5;
+    background: url(../images/hero-bg.webp);
+    position: relative;
+    z-index: 0;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.hero .container {
+    width: 1440px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hero h1 {
+    font-size: 100px;
+    text-align: center;
+}
+
+.hero p {
+    font-size: 18px;
+    text-align: center;
+    color: var(--white-color);
+    width: 60%;
+}
+/* End Hero */
