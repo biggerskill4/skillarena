@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
 @font-face {
-  font-family: 'Gameria';
-  src: url('../fonts/gameria/GAMERIA.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Gameria';
+    src: url('../fonts/gameria/GAMERIA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
+
 
 
 * {
@@ -23,6 +24,9 @@
     --darker-color: #9c0000;
     --white-color: #fff;
 }
+html {
+    overflow-x: hidden;
+}
 
 body {
     display: flex;
@@ -37,7 +41,12 @@ a {
     color: inherit;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Gameria', sans-serif;
     letter-spacing: 3px;
     line-height: 0.8;
@@ -56,10 +65,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cta {
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: "Pixelify Sans", sans-serif;
     background: var(--primary-color);
     color: var(--white-color);
-    padding: 10px 30px;
-    border-radius: 50px;
+    border: 1px solid #c02600;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 0 #f89354, 0 20px 10px #fab48973;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    &:hover {
+        box-shadow: 0 6px 0 #f89354, 0 14px 10px #fab48973;
+        transform: translateY(4px);
+    }
+    &:active {
+        box-shadow: 0 0 0 #f89354, 0 0px 0px #fab48973, inset 0 2px 4px #c02600;
+        transform: translateY(10px);
+    }
+}
+
+.extra-section {
+    height: 500px;
+    width: 100%;
+    padding: 30px;
 }
 
 /* header */
@@ -104,22 +136,25 @@ header .navbar ul li a {
     font-size: 16px;
     font-weight: 600;
     transition: all 0.3s ease;
+
     &:hover {
         color: var(--primary-color);
     }
 }
+
 /* End header */
 
 /* Hero */
 .hero {
     width: 100%;
     padding: 120px 0 60px;
-    height: 75vh;
+    height: 100vh;
     background: #f5f5f5;
     background: url(../images/hero-bg.webp);
     position: relative;
     z-index: 0;
 }
+
 .hero::before {
     content: '';
     position: absolute;
@@ -142,7 +177,7 @@ header .navbar ul li a {
 }
 
 .hero h1 {
-    font-size: 100px;
+    font-size: 140px;
     text-align: center;
 }
 
@@ -152,4 +187,63 @@ header .navbar ul li a {
     color: var(--white-color);
     width: 60%;
 }
+
 /* End Hero */
+
+
+
+/* Globally Responsive */
+@media (max-width: 1440px) {
+    .container {
+        width: 100% !important;
+    }
+
+    header .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .hero {
+        padding: 100px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 9vw;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    header .container .navbar {
+        display: none;
+    }
+
+    .hero p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 776px) {
+    p {
+        font-size: 14px !important;
+    }
+
+    .cta {
+        font-size: 14px !important;
+    }
+
+    header .site-logo img {
+        width: 100px;
+    }
+
+    .hero .container {
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 10vw;
+        text-align: center;
+    }
+}
+
+/* End Globally Responsive */
