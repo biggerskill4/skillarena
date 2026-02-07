@@ -21,8 +21,10 @@
     --primary-color: #FF6200;
     --secondary-color: #000000;
     --text-color: #222222;
+    --acent-color: #FF6200;
     --darker-color: #9c0000;
     --white-color: #fff;
+    --bg-color: #fff1e8;
 }
 html {
     overflow-x: hidden;
@@ -34,6 +36,7 @@ body {
     align-items: center;
     flex-direction: column;
     color: var(--text-color);
+    background-color: var(--bg-color);
 }
 
 a {
@@ -69,7 +72,7 @@ h6 {
     letter-spacing: 1px;
     text-transform: uppercase;
     font-family: "Pixelify Sans", sans-serif;
-    background: var(--primary-color);
+    background: var(--acent-color);
     color: var(--white-color);
     border: 1px solid #c02600;
     cursor: pointer;
@@ -85,6 +88,19 @@ h6 {
     &:active {
         box-shadow: 0 0 0 #f89354, 0 0px 0px #fab48973, inset 0 2px 4px #c02600;
         transform: translateY(10px);
+    }
+    &.cta-circle {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        font-size: 40px;
+    }
+    &.active {
+        transform: translateY(10px);
+        box-shadow: 0 0 0 #f89354, 0 0px 0px #fab48973, inset 0 2px 4px #c02600;
     }
 }
 
