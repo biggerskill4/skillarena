@@ -186,6 +186,11 @@ header .navbar ul li a {
 
     .cta {
         font-size: 14px !important;
+        &.cta-circle {
+            width: 40px;
+            height: 40px;
+            font-size: 30px;
+        }
     }
 
     header .site-logo img {
