@@ -72,3 +72,86 @@ canvas {
 }
 
 /* End Globally Responsive */
+
+/* typo container css */
+.typoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 0;
+    background-image: url("../images/Rectangle\ 3.png");
+    background-size: cover; 
+    background-position: center;
+    width: 1600px;
+}
+.difficulties{
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.typoContainer h2{
+    font-size: 80px !important;
+    padding-bottom: 20px !important;
+}
+.difficulties a{
+    font-size: 18px !important;
+    font-family: Pixelify Sans Mono, monospace !important;
+}
+.typing-test-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.sliding-window {
+    background: white;
+    height: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden; /* Bahar ka text chhupane ke liye */
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+}
+
+#text-track {
+    font-size: 32px;
+    white-space: nowrap; /* Text ek line mein rahega */
+    position: absolute;
+    left: 40px;
+    transition: left 0.2s ease; /* Sliding effect */
+    color: #999;
+}
+
+.char {
+    display: inline-block;
+    min-width: 15px; /* Letter spacing maintain rakhne ke liye */
+}
+
+.char.correct { color: #2ecc71; } /* Green */
+.char.wrong { 
+    color: #e74c3c; 
+    text-decoration: line-through; 
+} /* Red + Strike */
+
+.cursor-line {
+    position: absolute;
+    left: 40px;
+    width: 2px;
+    height: 40px;
+    background: #333;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+#hidden-input {
+    position: absolute;
+    opacity: 0;
+}
