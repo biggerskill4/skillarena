@@ -114,7 +114,7 @@ canvas {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     position: relative;
-    overflow: hidden; /* Bahar ka text chhupane ke liye */
+    overflow: hidden; 
     display: flex;
     align-items: center;
     padding: 0 40px;
@@ -122,19 +122,19 @@ canvas {
 
 #text-track {
     font-size: 32px;
-    white-space: nowrap; /* Text ek line mein rahega */
+    white-space: nowrap; 
     position: absolute;
     left: 40px;
-    transition: left 0.2s ease; /* Sliding effect */
+    transition: left 0.2s ease; 
     color: #999;
 }
 
 .char {
     display: inline-block;
-    min-width: 15px; /* Letter spacing maintain rakhne ke liye */
+    min-width: 15px; 
 }
 
-.char.correct { color: #2ecc71; } /* Green */
+.char.correct { color: #2ecc71; } 
 .char.wrong { 
     color: #e74c3c; 
     text-decoration: line-through; 
