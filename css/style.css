@@ -25,6 +25,8 @@
     --darker-color: #9c0000;
     --white-color: #fff;
     --bg-color: #fff1e8;
+
+    --max-width: 1440px;
 }
 html {
     overflow-x: hidden;
@@ -67,7 +69,7 @@ h6 {
     gap: 20px;
 }
 
-.cta {
+button, .cta {
     font-size: 20px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -125,7 +127,7 @@ header {
 }
 
 header .container {
-    width: 1440px;
+    width: var(--max-width);
     display: flex;
     justify-content: space-between;
     align-items: center;

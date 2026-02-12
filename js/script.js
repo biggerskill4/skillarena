@@ -4,7 +4,7 @@ const lenis = new Lenis({
 });
 
 
-const ctaButtons = document.querySelectorAll('.cta-circle');
+const ctaButtons = document.querySelectorAll('.cta-circle.btn-active');
 
 ctaButtons.forEach(button => {
     button.addEventListener('click', (e) => {
