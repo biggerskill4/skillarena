@@ -43,8 +43,5 @@ The project includes **four unique mini games**, each focusing on a different sk
 - **HTML**
 - **CSS**
 - **JavaScript**
-
-*(No external libraries required – pure frontend project)*
-
 ---
 
