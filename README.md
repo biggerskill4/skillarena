@@ -27,6 +27,8 @@ The project includes **four unique mini games**, each focusing on a different sk
 - Tests memory and concentration  
 - Classic memory-boosting game experience
 
+### 4️⃣ Canvas Player
+
 ---
 
 ## 🚀 Features
