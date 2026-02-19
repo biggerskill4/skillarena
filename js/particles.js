@@ -1,10 +1,18 @@
 const heroCanvas = document.querySelector('.hero-canvas');
 const ctx = heroCanvas.getContext('2d');
+const banner = document.querySelector('.hero');
 
-heroCanvas.width = window.innerWidth;
-heroCanvas.height = window.innerHeight;
+function resizeCanvas() {
+    // Set canvas size exactly to banner
+    heroCanvas.width = banner.clientWidth;
+    heroCanvas.height = banner.clientHeight;
 
-const maxParticles = 200;
+    // Reinitialize particles
+    init();
+}
+
+
+const maxParticles = 100;
 const colors = ['#ff6b6b', '#f06595', '#845ef7', '#5c7cfa', '#339af0'];
 const shapes = ['circle', 'square', 'triangle', 'cross'];
 let gravityOn = false;
@@ -110,17 +118,18 @@ function init() {
 }
 init()
 
-function animate() {
+function animateParticles() {
     ctx.clearRect(0, 0, heroCanvas.width, heroCanvas.height);
     particles.forEach(particle => {
         particle.update();
     });
-    requestAnimationFrame(animate);
+    requestAnimationFrame(animateParticles);
 }
 
-animate();
-window.addEventListener('resize', () => {
-    heroCanvas.width = window.innerWidth;
-    heroCanvas.height = window.innerHeight;
-    init();
-});
+animateParticles();
+
+// Initial setup
+resizeCanvas();
+
+// Window resize
+window.addEventListener('resize', resizeCanvas);
