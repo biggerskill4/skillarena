@@ -1,7 +1,7 @@
 # 🎮 SkillArena
 
 **SkillArena** is a fun and interactive mini-game platform designed to test and improve different cognitive and skill-based abilities.  
-The project includes **four unique mini games**, each focusing on a different skill area like knowledge, speed, reflexes, and memory.
+The project includes **unique mini games**, each focusing on a different skill area like knowledge, speed, reflexes, and memory.
 
 ---
 
