@@ -54,6 +54,63 @@ canvas {
 
 /* End Hero */
 
+.games {
+    width: 100%;
+    padding: 80px 15px;
+}
+
+.games .container {
+    width: var(--max-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.games h2 {
+    text-align: center;
+    font-size: 5vw;
+}
+.games p {
+    text-align: center;
+}
+
+.game-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.game-list .game-item {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #fab48975;
+    border-radius: 30px;
+    text-align: center;
+    height: auto;
+}
+.game-list .game-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background: #FAB489;
+    border-radius: 20px;
+}
+.game-list .game-item .content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 30px;
+}
+.game-list .game-item h3 {
+    font-size: 2vw;
+}
+
 /* Globally Responsive */
 @media (max-width: 1440px) {
     .hero {
