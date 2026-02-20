@@ -40,12 +40,3 @@ The project includes **unique mini games**, each focusing on a different skill a
 - Responsive design (works on different screen sizes)
 
 ---
-
-## 🛠️ Tech Stack
-
-- **HTML**
-- **CSS**
-- **JavaScript**
-- **Gsap**
----
-
