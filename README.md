@@ -10,7 +10,6 @@ The project includes **unique mini games**, each focusing on a different skill a
 ### 1️⃣ Quiz Challenge
 - Test your knowledge with multiple-choice questions  
 - Instant feedback on correct and wrong answers  
-- Designed to improve general awareness and decision-making
 
 ### 2️⃣ Typing Speed Test
 - Measure your typing speed and accuracy  
