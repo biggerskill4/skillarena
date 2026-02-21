@@ -22,8 +22,7 @@ The project includes **unique mini games**, each focusing on a different skill a
 - Improves reflexes and hand-eye coordination
 
 ### 4️⃣ Memory Card Flip Game
-- Flip cards to find matching pairs  
-- Tests memory and concentration  
+- Flip cards to find matching pairs   
 - Classic memory-boosting game experience
 
 ### 4️⃣ Canvas Player
