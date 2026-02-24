@@ -28,7 +28,7 @@ The project includes **unique mini games**, each focusing on a different skill a
 ### 4️⃣ Canvas Player
 - Controllable Player
 - Collision Effect
-- Gravity Control (Key - G / reset key - r )
+- Gravity Control (Key - G / reset key - R )
 ---
 
 ## 🚀 Features
