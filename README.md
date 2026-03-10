@@ -37,5 +37,5 @@ The project includes **unique mini games**, each focusing on a different skill a
 - Multiple skill-based mini games in one platform  
 - Simple and user-friendly interface  
 - Interactive gameplay with real-time feedback  
-- Responsive design (works on different screen sizes)
+- Responsive design
 ---
