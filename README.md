@@ -33,6 +33,4 @@ The project includes **unique mini games**, each focusing on a different skill a
 
 ## 🚀 Features
 
-- Multiple skill-based mini games in one platform  
-- Simple and user-friendly interface  
 ---
