@@ -32,5 +32,5 @@ The project includes **unique mini games**, each focusing on a different skill a
 ---
 
 ## 🚀 Features
-
+-- Features will be added
 ---
