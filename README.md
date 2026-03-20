@@ -30,7 +30,3 @@ The project includes **unique mini games**, each focusing on a different skill a
 - Collision Effect
 - Gravity Control (Key - G / reset key - R)
 ---
-
-## 🚀 Features
--- Features will be added
----
