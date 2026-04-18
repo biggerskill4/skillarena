@@ -1,0 +1,254 @@
+.hero {
+    width: 100%;
+    padding: 120px 0 60px;
+    height: 80vh !important;
+    background: #f5f5f5;
+    position: relative;
+    z-index: 0;
+    background: #030814;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.hero .container {
+    width: 1440px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hero h1 {
+    font-size: 8vw;
+    text-align: center;
+}
+
+.hero p {
+    font-size: 18px;
+    text-align: center;
+    color: var(--white-color);
+    width: 60%;
+}
+
+/* End Hero */
+
+/* Globally Responsive */
+@media (max-width: 1440px) {
+    .hero {
+        padding: 100px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 9vw;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 776px) {
+
+    .hero .container {
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 12vw;
+        text-align: center;
+    }
+}
+
+/* End Globally Responsive */
+
+.reactionContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 0;
+    background-image: url("../images/Rectangle\ 3.png");
+    background-size: cover;
+    background-position: center;
+    width: 1600px;
+}
+
+.reactionContainer h2 {
+    font-size: 80px !important;
+    padding-bottom: 20px !important;
+}
+
+.difficulties {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.reaction-start p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.reaction-start,
+.reaction-game,
+.reaction-results {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.reaction-start.hidden,
+.reaction-game.hidden,
+.reaction-results.hidden {
+    display: none !important;
+}
+
+.reaction-game {
+    width: 100%;
+}
+
+.reaction-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.reaction-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    background: rgba(255, 98, 0, 0.05);
+    border-radius: 15px;
+    border: 2px solid var(--primary-color);
+    margin: 30px 0;
+}
+
+.reaction-btn {
+    width: 60%;
+    height: 150px;
+    border: 3px solid var(--primary-color) !important;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: var(--primary-color);
+    color: white;
+}
+
+.reaction-btn:hover:not(:disabled) {
+    transform: scale(1.05);
+}
+
+.reaction-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.reaction-btn.green {
+    background: #10b981;
+    border-color: #10b981 !important;
+}
+
+.reaction-status {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
+    height: 30px;
+    color: var(--text-color);
+}
+
+.reaction-status.fast {
+    color: #10b981;
+}
+
+.reaction-status.slow {
+    color: #f97316;
+}
+
+.result-card {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 98, 0, 0.1);
+    border-radius: 15px;
+    border: 2px solid var(--primary-color);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.stat {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+}
+
+.stat span {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.stat p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .reactionContainer {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .reaction-box {
+        height: 250px;
+    }
+
+    .reaction-btn {
+        height: 100px;
+        font-size: 1.1rem;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .reactionContainer h2 {
+        font-size: 50px !important;
+    }
+}

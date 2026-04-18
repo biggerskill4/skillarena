@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Speed Test</title>
+    <title>Quiz Challenge</title>
     <!-- lenis -->
     <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/typing-speed.css">
+    <link rel="stylesheet" href="./css/quiz.css">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
     <header>
         <div class="container">
             <div class="site-logo">
-                <a href="/skillarena/index.html">
+                <a href="./index.html">
                     <img src="./images/logo.svg" alt="">
                 </a>
             </div>
@@ -37,17 +37,16 @@
     <section class="hero flex">
         <canvas class="hero-canvas"></canvas>
         <div class="container">
-            <h1>Test your<br> typing skills</h1>
-            <p>SkillArena empowers learners to sharpen their abilities through hands-on challenges, skill-based
-                competitions, and practical experiences designed for real success.</p>
+            <h1>Quiz Challenge</h1>
+            <p>Test your knowledge across various topics and compete against others in our exciting quiz challenge.</p>
         </div>
     </section>
     <!-- banner End -->
-    <!-- typo section start -->
+    <!-- quiz section start -->
     <section>
-        <div class="typoContainer">
+        <div class="quizContainer">
             <!-- Start Screen -->
-            <div class="typing-start">
+            <div class="quiz-start">
                 <h2>Select Difficulty</h2>
                 <div class="difficulties">
                     <button class="cta cta-circle difficulty-btn" data-difficulty="easy">E</button>
@@ -56,50 +55,46 @@
                 </div>
             </div>
 
-            <!-- Typing Game Screen -->
-            <div class="typing-game hidden">
-                <div class="typing-header">
-                    <div class="typing-stats">
-                        <span>WPM: <span id="wpm-display">0</span></span>
-                        <span>Accuracy: <span id="accuracy-display">0</span>%</span>
-                        <span>Time: <span id="time-display">0</span>s</span>
+            <!-- Quiz Container -->
+            <div class="quiz-container hidden">
+                <div class="quiz-header">
+                    <div class="progress">
+                        <span>Question <span id="current-question">1</span> of <span id="total-questions">10</span></span>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+                    <div class="score">Score: <span id="score">0</span></div>
+                </div>
+
+                <div class="quiz-body">
+                    <h3 id="quiz-question"></h3>
+                    <div class="quiz-options">
+                        <button class="option-btn" data-index="0"></button>
+                        <button class="option-btn" data-index="1"></button>
+                        <button class="option-btn" data-index="2"></button>
+                        <button class="option-btn" data-index="3"></button>
                     </div>
                 </div>
-                <div class="typing-text-container">
-                    <p class="typing-text" id="typing-text"></p>
-                </div>
-                <input type="text" id="typing-input" class="typing-input" placeholder="Click here and start typing..." />
-                <button class="cta reset-typing">Reset</button>
+
+                <button class="cta next-btn" disabled>Next Question</button>
             </div>
 
             <!-- Results Screen -->
-            <div class="typing-results hidden">
-                <h2>Test Complete!</h2>
+            <div class="quiz-results hidden">
+                <h2>Quiz Complete!</h2>
                 <div class="result-card">
-                    <h3>Your Results</h3>
-                    <div class="final-stats">
-                        <div class="stat">
-                            <span>WPM</span>
-                            <p id="final-wpm">0</p>
-                        </div>
-                        <div class="stat">
-                            <span>Accuracy</span>
-                            <p id="final-accuracy">0%</p>
-                        </div>
-                        <div class="stat">
-                            <span>Total Time</span>
-                            <p id="final-time">0s</p>
-                        </div>
-                    </div>
-                    <button class="cta restart-typing">Try Again</button>
+                    <h3>Your Score</h3>
+                    <div class="final-score"><span id="final-score">0</span>/10</div>
+                    <p id="result-message"></p>
+                    <button class="cta restart-quiz">Take Quiz Again</button>
                     <a href="./index.html" class="cta">Back to Home</a>
                 </div>
             </div>
         </div>
     </section>
-    <!-- typo section end -->
     <script src="./js/particles.js"></script>
-    <script src="./js/typo.js"></script>
+    <script src="./js/quiz.js"></script>
 </body>
 
 </html>

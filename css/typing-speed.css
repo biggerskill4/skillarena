@@ -73,8 +73,7 @@ canvas {
 
 /* End Globally Responsive */
 
-/* typo container css */
-.typoContainer{
+.typoContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,22 +81,234 @@ canvas {
     gap: 20px;
     padding: 50px 0;
     background-image: url("../images/Rectangle\ 3.png");
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
-    width: 1600px;
+    width: 100%;
 }
-.difficulties{
+
+.typoContainer h2 {
+    font-size: 80px !important;
+    padding-bottom: 20px !important;
+}
+
+.difficulties {
     display: flex;
     flex-direction: row !important;
     justify-content: center;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
-.typoContainer h2{
+
+.typing-start,
+.typing-game,
+.typing-results {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.typing-start.hidden,
+.typing-game.hidden,
+.typing-results.hidden {
+    display: none !important;
+}
+
+.typing-start h2,
+.typing-results h2 {
     font-size: 80px !important;
     padding-bottom: 20px !important;
 }
-.difficulties a{
-    font-size: 18px !important;
-    font-family: Pixelify Sans Mono, monospace !important;
+
+.typing-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.typing-stats {
+    display: flex;
+    gap: 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, var(--primary-color) 0%, rgba(255, 98, 0, 0.8) 100%);
+    padding: 25px 50px;
+    border-radius: 15px;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 10px 30px rgba(255, 98, 0, 0.3);
+}
+
+.typing-stats span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.typing-stats span span {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 900;
+    display: inline;
+}
+
+.typing-text-container {
+    background: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 40px;
+    margin: 30px 0;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.typing-text {
+    font-size: 1.3rem;
+    line-height: 1.9;
+    color: var(--text-color);
+    margin: 0;
+    word-wrap: break-word;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.typing-text .correct {
+    color: #10b981;
+    font-weight: bold;
+}
+
+.typing-text .incorrect {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.typing-input {
+    width: 100%;
+    max-width: 700px;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.typing-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(255, 98, 0, 0.3);
+}
+
+.typing-input::placeholder {
+    color: #bbb;
+}
+
+.reset-typing {
+    width: 100%;
+    max-width: 700px;
+}
+
+.result-card {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 98, 0, 0.1);
+    border-radius: 15px;
+    border: 2px solid var(--primary-color);
+    width: 100%;
+    max-width: 700px;
+}
+
+.result-card h3 {
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.final-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.final-stats .stat {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+}
+
+.final-stats .stat span {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.final-stats .stat p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.result-card .cta {
+    margin: 10px;
+}
+
+.result-card a.cta {
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .typoContainer {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .typing-stats {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 25px;
+        font-size: 1rem;
+    }
+
+    .typing-text {
+        font-size: 1.1rem;
+    }
+
+    .typing-text-container {
+        padding: 20px;
+        min-height: 120px;
+    }
+
+    .typing-input {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+
+    .final-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .final-stats .stat p {
+        font-size: 1.6rem;
+    }
+
+    .typoContainer h2,
+    .typing-results h2 {
+        font-size: 50px !important;
+    }
 }

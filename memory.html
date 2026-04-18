@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Speed Test</title>
+    <title>Memory Card Game</title>
     <!-- lenis -->
     <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/typing-speed.css">
+    <link rel="stylesheet" href="./css/memory.css">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
     <header>
         <div class="container">
             <div class="site-logo">
-                <a href="/skillarena/index.html">
+                <a href="./index.html">
                     <img src="./images/logo.svg" alt="">
                 </a>
             </div>
@@ -37,17 +37,16 @@
     <section class="hero flex">
         <canvas class="hero-canvas"></canvas>
         <div class="container">
-            <h1>Test your<br> typing skills</h1>
-            <p>SkillArena empowers learners to sharpen their abilities through hands-on challenges, skill-based
-                competitions, and practical experiences designed for real success.</p>
+            <h1>Memory Game</h1>
+            <p>Challenge your memory and concentration with our classic memory card game, perfect for all ages.</p>
         </div>
     </section>
     <!-- banner End -->
-    <!-- typo section start -->
+    <!-- memory section start -->
     <section>
-        <div class="typoContainer">
+        <div class="memoryContainer">
             <!-- Start Screen -->
-            <div class="typing-start">
+            <div class="memory-start">
                 <h2>Select Difficulty</h2>
                 <div class="difficulties">
                     <button class="cta cta-circle difficulty-btn" data-difficulty="easy">E</button>
@@ -56,50 +55,38 @@
                 </div>
             </div>
 
-            <!-- Typing Game Screen -->
-            <div class="typing-game hidden">
-                <div class="typing-header">
-                    <div class="typing-stats">
-                        <span>WPM: <span id="wpm-display">0</span></span>
-                        <span>Accuracy: <span id="accuracy-display">0</span>%</span>
-                        <span>Time: <span id="time-display">0</span>s</span>
+            <!-- Game Container -->
+            <div class="memory-game hidden">
+                <div class="memory-header">
+                    <div class="stats">
+                        <span>Moves: <span id="moves">0</span></span>
+                        <span>Pairs: <span id="pairs">0</span>/<span id="total-pairs">8</span></span>
                     </div>
+                    <button class="cta reset-btn">Reset Game</button>
                 </div>
-                <div class="typing-text-container">
-                    <p class="typing-text" id="typing-text"></p>
+
+                <div class="memory-grid" id="memory-grid">
+                    <!-- Cards will be generated here -->
                 </div>
-                <input type="text" id="typing-input" class="typing-input" placeholder="Click here and start typing..." />
-                <button class="cta reset-typing">Reset</button>
             </div>
 
             <!-- Results Screen -->
-            <div class="typing-results hidden">
-                <h2>Test Complete!</h2>
+            <div class="memory-results hidden">
+                <h2>Congratulations!</h2>
                 <div class="result-card">
-                    <h3>Your Results</h3>
+                    <h3>Game Complete!</h3>
                     <div class="final-stats">
-                        <div class="stat">
-                            <span>WPM</span>
-                            <p id="final-wpm">0</p>
-                        </div>
-                        <div class="stat">
-                            <span>Accuracy</span>
-                            <p id="final-accuracy">0%</p>
-                        </div>
-                        <div class="stat">
-                            <span>Total Time</span>
-                            <p id="final-time">0s</p>
-                        </div>
+                        <p>Moves: <span id="final-moves">0</span></p>
+                        <p>Time: <span id="final-time">0</span>s</p>
                     </div>
-                    <button class="cta restart-typing">Try Again</button>
+                    <button class="cta restart-memory">Play Again</button>
                     <a href="./index.html" class="cta">Back to Home</a>
                 </div>
             </div>
         </div>
     </section>
-    <!-- typo section end -->
     <script src="./js/particles.js"></script>
-    <script src="./js/typo.js"></script>
+    <script src="./js/memory.js"></script>
 </body>
 
 </html>
