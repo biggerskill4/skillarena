@@ -5,7 +5,7 @@ The project includes **unique mini games**, each focusing on a different skill a
 
 ---
 
-## 🕹️ Mini Games Included (Update Soon)
+## 🕹️ Mini Games Included (Update Soon -)
 
 ### 1️⃣ Quiz Challenge
 - Test your knowledge with multiple-choice questions  
